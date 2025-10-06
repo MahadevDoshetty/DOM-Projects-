@@ -9,22 +9,23 @@ form.addEventListener('submit', (e) => {
     validateInput();
 });
 function validateInput() {
-    let answer;
+    const resultValue = document.createElement('p');
+    resultValue.style.fontSize = "18px"
+    result.appendChild(resultValue);
     if (height.value.trim() && weight.value.trim()) {
         function calculateBMI() {
-            answer = weight.value / (height.value * height.value);
-            resultValue.textContent = answer;
+            resultValue.textContent = weight.value / (height.value * height.value);
         }
-        const resultValue = document.createElement('p');
-        resultValue.textContent = "Correct format";
-        resultValue.style.fontSize = "18px"
-        result.appendChild(resultValue);
         calculateBMI();
+        if (resultValue.textContent < 18.6) {
+            resultValue.style.color = "red"
+        } else if (resultValue.textContent > 24.9) {
+            resultValue.style.color = "red"
+        }else if(resultValue.textContent > 18.6 && resultValue.textContent < 24.9){
+            resultValue.style.color = "green"
+        }
     }
     else {
-        const resultValue = document.createElement('p');
-        resultValue.style.fontSize = "18px"
         resultValue.textContent = 'Incorrect Format';
-        result.appendChild(resultValue);
     }
 }
