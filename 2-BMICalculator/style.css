@@ -5,6 +5,7 @@
   background-color: #797978;
   padding-left: 30px;
 }
+
 #height,
 #weight {
   width: 150px;
@@ -24,6 +25,7 @@
   color: rgb(241, 241, 241);
 }
 
+
 button {
   width: 150px;
   height: 35px;
@@ -42,5 +44,5 @@ button {
 h1 {
   padding-left: 15px;
   padding-top: 25px;
-  
+
 }
