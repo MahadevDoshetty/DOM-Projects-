@@ -7,7 +7,6 @@ const result = document.getElementById("results");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     let bmi = (weight.value / (height.value * height.value)).toFixed(3);
-
     const resultValue = document.createElement('p');
     resultValue.style.fontSize = "18px"
     result.textContent = "";
