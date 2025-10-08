@@ -11,7 +11,8 @@ form.addEventListener('submit', (e) => {
     result.textContent = "";
     result.appendChild(resultValue);
     if (height.value.trim() && weight.value.trim()) {
-            resultValue.textContent = (weight.value / (height.value * height.value)).toFixed(3);
+            let bmi = (weight.value / (height.value * height.value)).toFixed(3);
+            resultValue.textContent = `Your BMI is ${bmi}`;
         if (resultValue.textContent < 18.6) {
             resultValue.style.color = "red"
         } else if (resultValue.textContent > 24.9) {

@@ -9,13 +9,15 @@ let resultParas = document.getElementById('resultParas');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const result = document.createElement('p');
+    result.textContent = "";
     resultParas.appendChild(result);
-    if (guessField.value != randomNumber) {
-        guessSubmit.addEventListener('click', () => {
-            for (let i = 10; i > 0; i--) {
-                guessesRemaining.textContent = i;
-            }
-        })
+
+    // if (guessField.value != randomNumber && guessField.value) {
+    //     guessSubmit.addEventListener('click', () => {
+    //     })
+    // } 
+    if (guessField.value == randomNumber) {
+        result.textContent = "Yes, correct guess!";
     }
 });
 console.log(randomNumber);
