@@ -6,18 +6,19 @@ const calculate = document.getElementById("calculate");
 const result = document.getElementById("results");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    let bmi = (weight.value / (height.value * height.value)).toFixed(3);
+
     const resultValue = document.createElement('p');
     resultValue.style.fontSize = "18px"
     result.textContent = "";
     result.appendChild(resultValue);
     if (height.value.trim() && weight.value.trim()) {
-            let bmi = (weight.value / (height.value * height.value)).toFixed(3);
-            resultValue.textContent = `Your BMI is ${bmi}`;
-        if (resultValue.textContent < 18.6) {
+        resultValue.textContent = `Your BMI is ${bmi}`;
+        if (bmi < 18.6) {
             resultValue.style.color = "red"
-        } else if (resultValue.textContent > 24.9) {
+        } else if( bmi > 24.9) {
             resultValue.style.color = "red"
-        } else if (resultValue.textContent > 18.6 || resultValue.textContent < 24.9) {
+        } else if (bmi > 18.6 || bmi < 24.9) {
             resultValue.style.color = "green"
         }
     } else {
