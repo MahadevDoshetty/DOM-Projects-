@@ -1,4 +1,4 @@
-const btn = document.querySelector('#emoji');
+// const btn = document.querySelector('#emoji');
 const emojis = [
   '😆',
   '😅',
@@ -36,5 +36,5 @@ const emojis = [
   '😬',
 ];
 btn.addEventListener('mouseover',()=>{
-  btn.innerHTML = emojis[Math.floor(Math.random()*10)];
+  btn.innerHTML = emojis[Math.floor(Math.random()*34)];
 });
