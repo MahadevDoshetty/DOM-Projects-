@@ -1,4 +1,4 @@
-// const btn = document.querySelector('#emoji');
+const btn = document.querySelector('#emoji');
 const emojis = [
   '😆',
   '😅',
